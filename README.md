@@ -9,10 +9,11 @@ Defaults (no args):
 ```
 python3 backend/processor.py
 ```
-Reads:
+#Reads:
 - `backend/data/members.csv`
 - `backend/data/visits.csv`
-Writes:
+  
+#Writes:
 - `backend/data/output.csv`
 - `backend/data/summary.json`
 
