@@ -173,7 +173,7 @@ def write_output(file_path: str | Path, grouped_data: Dict[Tuple[str, str], List
 
 def print_top_members(grouped_data: Dict[Tuple[str, str], List[str]], top_n: int = 5) -> None:
     """
-    Bonus: Print top N members by number of visits.
+    Bonus: Print top N members by number of visits. Top 5 are asked for, but make it configurable.
     Each line: member_id, amount_of_visits
     """
     visits_per_member: Dict[str, int] = defaultdict(int)
