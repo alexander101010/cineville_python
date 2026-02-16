@@ -7,13 +7,16 @@ Reads:
 
 Outputs:
 - output.csv with rows: member_id,barcode,[visit_id1, visit_id2, ...]
+- summary.json for serving to frontend
 
 Also prints:
 - Top 5 members by number of visits (member_id, amount_of_visits)
 - Total number of walk-ins (visits without reservation_id)
 
 Run:
-  python3 main.py --members members.csv --visits visits.csv --output output.csv
+  python3 backend/processor.py
+  -OR-
+  python3 backend/processor.py --members members.csv --visits visits.csv --output output.csv
 """
 
 from __future__ import annotations
