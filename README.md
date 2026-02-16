@@ -4,16 +4,17 @@ This repo supports two evaluation paths:
 - CLI: run the Python processor directly.
 - Web: start a local FastAPI server and view a React + Tailwind UI.
 
+Note: you may have to use `python` instead of `python3` depending on local installation of python. 
+
 ## 1) CLI
-Defaults (no args):
+Defaults (if you use no args, the members and visits csv files are saved in backend/data and used as defaults):
 ```
 python3 backend/processor.py
 ```
-#Reads:
+### Reads:
 - `backend/data/members.csv`
 - `backend/data/visits.csv`
-  
-#Writes:
+### Writes:
 - `backend/data/output.csv`
 - `backend/data/summary.json`
 
@@ -29,19 +30,17 @@ From the project root:
 pip install fastapi uvicorn
 uvicorn backend.app:app --reload
 ```
-Open `http://localhost:8000`.
 
 ### Frontend
-Choose one:
 
-Option A: build the UI so FastAPI can serve it on `http://localhost:8000`:
+Build the UI so FastAPI can serve it on `http://localhost:8000`:
 ```
 cd frontend
 npm install
 npm run build
 ```
 
-Option B: run the dev server (separate port) while FastAPI runs at `http://localhost:8000`:
+For development server: run the dev server (separate port) while FastAPI runs at `http://localhost:8000`:
 ```
 cd frontend
 npm install
